@@ -63,17 +63,22 @@ async function sendProofToCustomer(formData: FormData) {
 }
 
 export default async function AdminOrdersPage() {
-  const orders = await db.order.findMany({
-    orderBy: { createdAt: 'desc' },
-    include: {
-      items: {
-        include: { product: true },
+  let orders: any[] = [];
+  try {
+    orders = await db.order.findMany({
+      orderBy: { createdAt: 'desc' },
+      include: {
+        items: {
+          include: { product: true },
+        },
+        proofs: {
+          orderBy: { createdAt: 'desc' },
+        },
       },
-      proofs: {
-        orderBy: { createdAt: 'desc' },
-      },
-    },
-  });
+    });
+  } catch (err) {
+    console.error('Failed to query orders in AdminOrdersPage:', err);
+  }
 
   return (
     <div className="space-y-8">
@@ -96,8 +101,13 @@ export default async function AdminOrdersPage() {
         /* Orders List */
         <div className="space-y-6">
           {orders.map((order) => {
-            const shippingAddress = JSON.parse(order.shippingAddress || '{}');
-            const latestProof = order.proofs[0];
+            let shippingAddress: any = {};
+            try {
+              shippingAddress = JSON.parse(order.shippingAddress || '{}');
+            } catch {
+              shippingAddress = { street: order.shippingAddress || '' };
+            }
+            const latestProof = order.proofs?.[0];
 
             return (
               <div key={order.id} className="bg-neutral-950 p-6 rounded-sm border border-neutral-800 space-y-6 shadow-lg">
@@ -129,7 +139,7 @@ export default async function AdminOrdersPage() {
                 <div className="space-y-3">
                   <h4 className="text-xs uppercase tracking-wider font-bold text-neutral-400">Articoli Acquistati & Personalizzazioni:</h4>
                   <div className="space-y-2">
-                    {order.items.map((item) => {
+                    {order.items.map((item: any) => {
                       let customPayload: any = {};
                       try {
                         customPayload = typeof item.customization === 'string' ? JSON.parse(item.customization) : item.customization || {};

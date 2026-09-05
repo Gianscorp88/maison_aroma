@@ -43,13 +43,18 @@ async function createProofVersion(formData: FormData) {
 }
 
 export default async function AdminProofsPage() {
-  const ordersWithCustomization = await db.order.findMany({
-    orderBy: { createdAt: 'desc' },
-    include: {
-      items: { include: { product: true } },
-      proofs: true,
-    },
-  });
+  let ordersWithCustomization: any[] = [];
+  try {
+    ordersWithCustomization = await db.order.findMany({
+      orderBy: { createdAt: 'desc' },
+      include: {
+        items: { include: { product: true } },
+        proofs: true,
+      },
+    });
+  } catch (err) {
+    console.error('Failed to query proofs in AdminProofsPage:', err);
+  }
 
   return (
     <div className="space-y-8">

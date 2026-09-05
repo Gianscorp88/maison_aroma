@@ -20,14 +20,19 @@ async function advanceProductionStage(formData: FormData) {
 }
 
 export default async function AdminProductionPage() {
-  const orders = await db.order.findMany({
-    orderBy: { createdAt: 'asc' },
-    include: {
-      items: {
-        include: { product: true },
+  let orders: any[] = [];
+  try {
+    orders = await db.order.findMany({
+      orderBy: { createdAt: 'asc' },
+      include: {
+        items: {
+          include: { product: true },
+        },
       },
-    },
-  });
+    });
+  } catch (err) {
+    console.error('Failed to query orders in AdminProductionPage:', err);
+  }
 
   const columns = [
     { title: '1. Nuovi & In Attesa', status: 'RECEIVED', color: 'border-blue-500' },
@@ -72,7 +77,7 @@ export default async function AdminProductionPage() {
                       <p className="font-semibold text-white truncate">{order.customerName}</p>
 
                       <div className="text-[10px] text-neutral-400 border-t border-b border-neutral-800 py-1 space-y-0.5">
-                        {order.items.map((it) => (
+                        {order.items.map((it: any) => (
                           <p key={it.id} className="truncate">
                             • {it.quantity}x {it.product.name}
                           </p>

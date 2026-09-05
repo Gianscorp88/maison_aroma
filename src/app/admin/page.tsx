@@ -8,24 +8,41 @@ export const revalidate = 0;
 
 export default async function AdminOverviewPage() {
   const shopSettings = getShopSettings();
-  const orders = await db.order.findMany({
-    orderBy: { createdAt: 'desc' },
-    include: { items: true },
-  });
 
-  const quotes = await db.quoteRequest.findMany({
-    where: { status: 'NEW' },
-  });
+  let orders: any[] = [];
+  try {
+    orders = await db.order.findMany({
+      orderBy: { createdAt: 'desc' },
+      include: { items: true },
+    });
+  } catch (err) {
+    console.error('Failed to query orders for admin overview:', err);
+  }
 
-  const lowStockItems = await db.inventoryItem.findMany({
-    where: { stock: { lte: db.inventoryItem.fields.minAlert } },
-  });
+  let quotes: any[] = [];
+  try {
+    quotes = await db.quoteRequest.findMany({
+      where: { status: 'NEW' },
+    });
+  } catch (err) {
+    console.error('Failed to query quotes for admin overview:', err);
+  }
+
+  let lowStockItems: any[] = [];
+  try {
+    const allInventory = await db.inventoryItem.findMany();
+    lowStockItems = allInventory.filter((item) => item.stock <= item.minAlert);
+  } catch (err) {
+    console.error('Failed to query inventory for admin overview:', err);
+  }
 
   const totalRevenue = orders
     .filter((o) => o.paymentStatus === 'PAID')
-    .reduce((sum, o) => sum + o.totalAmount, 0);
+    .reduce((sum, o) => sum + (o.totalAmount || 0), 0);
 
-  const pendingProofOrders = orders.filter((o) => o.proofStatus === 'AWAITING_PROOF' || o.proofStatus === 'PROOF_SENT');
+  const pendingProofOrders = orders.filter(
+    (o) => o.proofStatus === 'AWAITING_PROOF' || o.proofStatus === 'PROOF_SENT'
+  );
   const inProductionOrders = orders.filter((o) => o.status === 'IN_PRODUCTION');
 
   return (

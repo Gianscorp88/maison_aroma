@@ -19,9 +19,14 @@ async function updateQuoteStatus(formData: FormData) {
 }
 
 export default async function AdminQuotesPage() {
-  const quotes = await db.quoteRequest.findMany({
-    orderBy: { createdAt: 'desc' },
-  });
+  let quotes: any[] = [];
+  try {
+    quotes = await db.quoteRequest.findMany({
+      orderBy: { createdAt: 'desc' },
+    });
+  } catch (err) {
+    console.error('Failed to query quotes in AdminQuotesPage:', err);
+  }
 
   return (
     <div className="space-y-8">

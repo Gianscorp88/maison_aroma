@@ -19,9 +19,14 @@ async function updateStock(formData: FormData) {
 }
 
 export default async function AdminInventoryPage() {
-  const inventoryItems = await db.inventoryItem.findMany({
-    orderBy: { category: 'asc' },
-  });
+  let inventoryItems: any[] = [];
+  try {
+    inventoryItems = await db.inventoryItem.findMany({
+      orderBy: { category: 'asc' },
+    });
+  } catch (err) {
+    console.error('Failed to query inventory in AdminInventoryPage:', err);
+  }
 
   return (
     <div className="space-y-8">
