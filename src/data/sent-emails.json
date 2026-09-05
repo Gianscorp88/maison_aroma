@@ -1,0 +1,29 @@
+[
+  {
+    "id": "eml_1788613541842",
+    "to": "test@example.com",
+    "subject": "Conferma Ordine #MA-2026-1221 — Maison Aroma",
+    "type": "ORDER_CONFIRMATION",
+    "orderNumber": "MA-2026-1221",
+    "contentHtml": "\n    <div style=\"font-family: serif; color: #2C1810; padding: 20px; max-width: 600px; margin: 0 auto; border: 1px solid #EAE0D5; background: #FAF8F5;\">\n      <h2 style=\"color: #C5A059; text-align: center;\">Maison Aroma — Profumi di Casa</h2>\n      <hr style=\"border: 0; border-top: 1px solid #EAE0D5;\" />\n      <h3>Grazie per il tuo ordine, Test!</h3>\n      <p>Il tuo ordine <strong>#MA-2026-1221</strong> è stato ricevuto con successo ed è in fase di presa in carico.</p>\n      \n      <h4>Riepilogo Ordine:</h4>\n      <ul><li><strong>Candela Personalizzata Maison Aroma</strong> - Q.tà: 1 pz - €10.00 </li></ul>\n      \n      <p><strong>Totale Calcolato:</strong> €22.00</p>\n      <p><strong>Metodo di Pagamento:</strong> TEST_APPROVED</p>\n      <p><strong>Stato Iniziale Ordine:</strong> RECEIVED</p>\n      \n      <hr style=\"border: 0; border-top: 1px solid #EAE0D5;\" />\n      <p style=\"font-size: 11px; color: #786C66; text-align: center;\">Maison Aroma • Haute Parfumerie & Candele Artigianali</p>\n    </div>\n  ",
+    "sentAt": "2026-09-05T13:05:41.842Z"
+  },
+  {
+    "id": "eml_1787909895579",
+    "to": "sposa@maisonaroma.it",
+    "subject": "Conferma Ordine #MA-2026-2186 — Maison Aroma",
+    "type": "ORDER_CONFIRMATION",
+    "orderNumber": "MA-2026-2186",
+    "contentHtml": "\n    <div style=\"font-family: serif; color: #2C1810; padding: 20px; max-width: 600px; margin: 0 auto; border: 1px solid #EAE0D5; background: #FAF8F5;\">\n      <h2 style=\"color: #C5A059; text-align: center;\">Maison Aroma — Profumi di Casa</h2>\n      <hr style=\"border: 0; border-top: 1px solid #EAE0D5;\" />\n      <h3>Grazie per il tuo ordine, Giulia Bianchi!</h3>\n      <p>Il tuo ordine <strong>#MA-2026-2186</strong> è stato ricevuto con successo ed è in fase di presa in carico.</p>\n      \n      <h4>Riepilogo Ordine:</h4>\n      <ul><li><strong>Colonna design mini</strong> - Q.tà: 1 pz - €10.00 <br/><small style=\"color: #786C66;\">Fragranza: Fragranza • Packaging: Scatola Luxury Avorio</small></li></ul>\n      \n      <p><strong>Totale Calcolato:</strong> €22.00</p>\n      <p><strong>Metodo di Pagamento:</strong> TEST_APPROVED</p>\n      <p><strong>Stato Iniziale Ordine:</strong> PROOF_PENDING</p>\n      \n      <hr style=\"border: 0; border-top: 1px solid #EAE0D5;\" />\n      <p style=\"font-size: 11px; color: #786C66; text-align: center;\">Maison Aroma • Haute Parfumerie & Candele Artigianali</p>\n    </div>\n  ",
+    "sentAt": "2026-08-28T09:38:15.579Z"
+  },
+  {
+    "id": "eml_1787909623969",
+    "to": "sposa@maisonaroma.it",
+    "subject": "Conferma Ordine #MA-2026-9314 — Maison Aroma",
+    "type": "ORDER_CONFIRMATION",
+    "orderNumber": "MA-2026-9314",
+    "contentHtml": "\n    <div style=\"font-family: serif; color: #2C1810; padding: 20px; max-width: 600px; margin: 0 auto; border: 1px solid #EAE0D5; background: #FAF8F5;\">\n      <h2 style=\"color: #C5A059; text-align: center;\">Maison Aroma — Profumi di Casa</h2>\n      <hr style=\"border: 0; border-top: 1px solid #EAE0D5;\" />\n      <h3>Grazie per il tuo ordine, Giulia Bianchi!</h3>\n      <p>Il tuo ordine <strong>#MA-2026-9314</strong> è stato ricevuto con successo ed è in fase di presa in carico.</p>\n      \n      <h4>Riepilogo Ordine:</h4>\n      <ul><li><strong>Colonna design mini</strong> - Q.tà: 1 pz - €10.00 <br/><small style=\"color: #786C66;\">Fragranza: Fragranza • Packaging: Scatola Luxury Avorio</small></li></ul>\n      \n      <p><strong>Totale Calcolato:</strong> €22.00</p>\n      <p><strong>Metodo di Pagamento:</strong> TEST_APPROVED</p>\n      <p><strong>Stato Iniziale Ordine:</strong> PROOF_PENDING</p>\n      \n      <hr style=\"border: 0; border-top: 1px solid #EAE0D5;\" />\n      <p style=\"font-size: 11px; color: #786C66; text-align: center;\">Maison Aroma • Haute Parfumerie & Candele Artigianali</p>\n    </div>\n  ",
+    "sentAt": "2026-08-28T09:33:43.969Z"
+  }
+]

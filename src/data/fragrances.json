@@ -1,0 +1,259 @@
+[
+  {
+    "id": "fra-vaniglia-bourbon",
+    "name": "Frutti rossi",
+    "slug": "Frutti-rossi",
+    "badge": "Fruttata",
+    "description": "Una fragranza fruttata, dolce e avvolgente, ispirata alla freschezza e alla golosità dei frutti rossi. Un profumo vivace e piacevole, capace di creare un’atmosfera accogliente, romantica e irresistibilmente gourmand.",
+    "topNotes": [
+      "Lampone",
+      "melograno",
+      "prugna"
+    ],
+    "heartNotes": [
+      "Mirtillo",
+      "lillà",
+      "fragola",
+      "ciliegia",
+      "vaniglia"
+    ],
+    "baseNotes": [
+      "Rosa",
+      "muschio",
+      "mandarino"
+    ],
+    "image": "/uploads/1787906320935_7c47a9a94e32f507b5d2e3bee72eb6ae_jpg.jpg",
+    "status": "ACTIVE",
+    "order": 1,
+    "createdAt": "2026-08-17T14:15:02.992Z",
+    "updatedAt": "2026-08-28T08:43:16.850Z"
+  },
+  {
+    "id": "fra-rosa-maggio",
+    "name": "Mela e cannella",
+    "slug": "mela-e-cannella",
+    "badge": "Gourmand Speziata",
+    "description": "Una fragranza calda, speziata e avvolgente, ispirata ai profumi più accoglienti della stagione. Dolce e rassicurante, crea un’atmosfera intima e confortevole, perfetta per rendere ogni ambiente ancora più piacevole.",
+    "topNotes": [
+      "Mele arrostite",
+      "limone frizzante"
+    ],
+    "heartNotes": [
+      "Bastoncini di cannella",
+      "fragola schiacciata"
+    ],
+    "baseNotes": [
+      "Sciroppo d’acero",
+      "zucchero",
+      "vaniglia"
+    ],
+    "image": "/uploads/1787906580794_bf994c837c9acf8d8684cbe05280c321_jpg.jpg",
+    "status": "ACTIVE",
+    "order": 2,
+    "createdAt": "2026-08-17T14:15:02.992Z",
+    "updatedAt": "2026-08-28T08:43:01.675Z"
+  },
+  {
+    "id": "fra-fior-di-cotone",
+    "name": "Caramello, Lampone & Vaniglia",
+    "slug": "caramello-lampone-vaniglia",
+    "badge": "Fruttata Gourmand",
+    "description": "Una fragranza dolce, cremosa e golosa, dal carattere morbido e avvolgente. Un profumo irresistibile che unisce freschezza fruttata e dolcezza gourmand, perfetto per creare un’atmosfera calda, delicata e accogliente.",
+    "topNotes": [
+      "Fragola",
+      "albicocca"
+    ],
+    "heartNotes": [
+      "Ribes caramellato",
+      "vaniglia",
+      "dolce di latte"
+    ],
+    "baseNotes": [
+      "Muschio",
+      "cashmere"
+    ],
+    "image": "/uploads/1787906690412_25a415fe8c8721a731b3f423e6db3c7e_jpg.jpg",
+    "status": "ACTIVE",
+    "order": 3,
+    "createdAt": "2026-08-17T14:15:02.992Z",
+    "updatedAt": "2026-08-28T09:13:54.984Z"
+  },
+  {
+    "id": "fra-cocco-gourmet",
+    "name": "Cappuccino",
+    "slug": "Cappuccino",
+    "badge": "Gourmand Cremosa",
+    "description": "Una fragranza cremosa, intensa e avvolgente, ispirata al profumo caldo e confortante del cappuccino appena preparato. Morbida e golosa, crea un’atmosfera accogliente, rilassante e irresistibilmente gourmand.",
+    "topNotes": [
+      "Caffè macchiato",
+      "vaniglia"
+    ],
+    "heartNotes": [
+      "Crema di latte",
+      "cacao",
+      "panna",
+      "caramello"
+    ],
+    "baseNotes": [
+      "Burro",
+      "cocco"
+    ],
+    "image": "/uploads/1787906900125_b8bf46b135efa30f68b4f9db08c12b4f_jpg.jpg",
+    "status": "ACTIVE",
+    "order": 4,
+    "createdAt": "2026-08-17T14:15:02.992Z",
+    "updatedAt": "2026-08-28T08:48:20.770Z"
+  },
+  {
+    "id": "fra-bergamotto-iris",
+    "name": "Muschio bianco e lavanda",
+    "slug": "muschio-bianco-e-lavanda",
+    "badge": "Aromatica / Muschio",
+    "description": "Una fragranza pulita, delicata e rilassante, dal carattere morbido e avvolgente. Un profumo elegante e rassicurante, perfetto per creare un’atmosfera fresca, armoniosa e piacevolmente distensiva.",
+    "topNotes": [
+      "Eucalipto",
+      "bucato pulito"
+    ],
+    "heartNotes": [
+      "Lavanda",
+      "fava tonka"
+    ],
+    "baseNotes": [
+      "Vaniglia",
+      "muschio"
+    ],
+    "image": "/uploads/1787907025766_051a94e1649cbde68fa4bf7a9b459e33_jpg.jpg",
+    "status": "ACTIVE",
+    "order": 5,
+    "createdAt": "2026-08-17T14:15:02.992Z",
+    "updatedAt": "2026-08-28T08:50:26.164Z"
+  },
+  {
+    "id": "fra-lavanda-provenza",
+    "name": "Fior di cotone",
+    "slug": "fior-di-cotone",
+    "badge": "Floreale",
+    "description": "Una fragranza soffice, pulita e delicatamente avvolgente, ispirata alla sensazione di freschezza dei tessuti appena lavati. Elegante e rassicurante, dona agli ambienti un’atmosfera luminosa, ordinata e piacevolmente rilassante.",
+    "topNotes": [
+      "Note verdi",
+      "accordo aldeidato",
+      "bergamotto"
+    ],
+    "heartNotes": [
+      "Rosa",
+      "gelsomino",
+      "mughetto",
+      "garofano",
+      "iris"
+    ],
+    "baseNotes": [
+      "Sandalo",
+      "muschio",
+      "eliotropio"
+    ],
+    "image": "/uploads/1787907081837_fc4bc35b564d4a5dabd0788ef1cc3619_jpg.jpg",
+    "status": "ACTIVE",
+    "order": 6,
+    "createdAt": "2026-08-17T14:15:02.992Z",
+    "updatedAt": "2026-08-28T08:51:50.265Z"
+  },
+  {
+    "id": "fra_1787907199263",
+    "name": "Cocco",
+    "slug": "cocco",
+    "badge": "tropicale",
+    "description": "Una fragranza esotica, cremosa e avvolgente, dal carattere dolce e vellutato. Un profumo morbido e solare, perfetto per creare un’atmosfera rilassante, accogliente e piacevolmente tropicale.",
+    "topNotes": [
+      "Latte di cocco"
+    ],
+    "heartNotes": [
+      "Note dolci",
+      "vaniglia"
+    ],
+    "baseNotes": [
+      "Orchidea",
+      "muschio bianco"
+    ],
+    "image": "/uploads/1787907250765_5a4bebc0e9da16d91d86d8b429cd39e8_jpg.jpg",
+    "status": "ACTIVE",
+    "order": 7,
+    "createdAt": "2026-08-28T08:53:19.263Z",
+    "updatedAt": "2026-08-28T08:54:11.910Z"
+  },
+  {
+    "id": "fra_1787907332050",
+    "name": "Agrumi",
+    "slug": "agrumi",
+    "badge": "Agrumata",
+    "description": "Una fragranza fresca, luminosa e vivace, dal carattere energizzante e pulito. Un profumo solare e frizzante, perfetto per donare agli ambienti una sensazione di leggerezza, freschezza e vitalità.",
+    "topNotes": [
+      "Limone",
+      "mandarino",
+      "bergamotto"
+    ],
+    "heartNotes": [
+      "Basilico",
+      "timo",
+      "lillà",
+      "iris"
+    ],
+    "baseNotes": [
+      "Vetiver",
+      "patchouli"
+    ],
+    "image": "/uploads/1787907308053_bbd8d539d25e74d26a65cf7c80803a72_jpg.jpg",
+    "status": "ACTIVE",
+    "order": 8,
+    "createdAt": "2026-08-28T08:55:32.050Z",
+    "updatedAt": "2026-08-28T08:55:32.050Z"
+  },
+  {
+    "id": "fra_1787907446355",
+    "name": "Citronella",
+    "slug": "citronella",
+    "badge": "Aromatica da giardino",
+    "description": "Una fragranza fresca, agrumata e vivace, dal carattere pulito e brillante. Un profumo leggero ed energizzante, perfetto per creare un’atmosfera piacevole, ariosa e naturalmente rinfrescante.",
+    "topNotes": [
+      "Citronella",
+      "note agrumate"
+    ],
+    "heartNotes": [
+      "Citronella"
+    ],
+    "baseNotes": [
+      "Citronella"
+    ],
+    "image": "/uploads/1787907438955_7bb20537c882976727fa456e339dc73c_jpg.jpg",
+    "status": "ACTIVE",
+    "order": 9,
+    "createdAt": "2026-08-28T08:57:26.355Z",
+    "updatedAt": "2026-08-28T08:57:26.355Z"
+  },
+  {
+    "id": "fra_1787907712388",
+    "name": "Legni speziati",
+    "slug": "legni-speziati",
+    "badge": "Orientale / Legnosa / Speziata",
+    "description": "",
+    "topNotes": [
+      "Bergamotto",
+      "cardamomo",
+      "pepe"
+    ],
+    "heartNotes": [
+      "Patchouli",
+      "vaniglia",
+      "benzoino"
+    ],
+    "baseNotes": [
+      "Vetiver",
+      "fava tonka",
+      "muschio"
+    ],
+    "image": "/uploads/1787907711913_chatgpt_image_28_ago_2026__11_01_40_png.png",
+    "status": "ACTIVE",
+    "order": 10,
+    "createdAt": "2026-08-28T09:01:52.388Z",
+    "updatedAt": "2026-08-28T09:01:52.388Z"
+  }
+]

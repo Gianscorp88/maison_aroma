@@ -1,0 +1,183 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  name      String
+  role      String   @default("CUSTOMER") // ADMIN, PRODUCTION, CUSTOMER
+  phone     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  orders    Order[]
+  quotes    QuoteRequest[]
+  wishlist  Wishlist[]
+}
+
+model Category {
+  id          String    @id @default(uuid())
+  name        String
+  slug        String    @unique
+  description String?
+  products    Product[]
+}
+
+model Product {
+  id                  String                      @id @default(uuid())
+  name                String
+  slug                String                      @unique
+  description         String
+  shortDescription    String?
+  basePrice           Float
+  costPrice           Float                       @default(0.0)
+  sku                 String                      @unique
+  isCustomizable      Boolean                     @default(true)
+  featured            Boolean                     @default(false)
+  isBestSeller        Boolean                     @default(false)
+  minQuantity         Int                         @default(1)
+  productionDays      Int                         @default(5)
+  images              String                      // JSON array string of image URLs
+  waxType             String                      @default("Soy & Coconut Wax")
+  burnTime            String                      @default("45 Hours")
+  dimensions          String                      @default("8cm x 9cm")
+  weight              String                      @default("220g")
+  categoryId          String
+  category            Category                    @relation(fields: [categoryId], references: [id])
+  variants            ProductVariant[]
+  customizationGroups ProductCustomizationGroup[]
+  orderItems          OrderItem[]
+  createdAt           DateTime                    @default(now())
+  updatedAt           DateTime                    @updatedAt
+}
+
+model ProductVariant {
+  id          String  @id @default(uuid())
+  productId   String
+  product     Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  name        String  // e.g. "220g Amber Glass", "50g Favours Jar"
+  priceOffset Float   @default(0.0)
+  stock       Int     @default(100)
+}
+
+model CustomizationGroup {
+  id          String                      @id @default(uuid())
+  title       String                      // e.g., "Fragrance", "Container Color", "Label Typography", "Ribbon Finish"
+  type        String                      // "FRAGRANCE", "COLOR", "TEXT", "SELECT", "PACKAGING"
+  required    Boolean                     @default(true)
+  options     CustomizationOption[]
+  products    ProductCustomizationGroup[]
+}
+
+model CustomizationOption {
+  id          String             @id @default(uuid())
+  groupId     String
+  group       CustomizationGroup @relation(fields: [groupId], references: [id], onDelete: Cascade)
+  label       String
+  priceOffset Float              @default(0.0)
+  description String?
+  imageUrl    String?
+  colorHex    String?
+}
+
+model ProductCustomizationGroup {
+  productId String
+  groupId   String
+  product   Product            @relation(fields: [productId], references: [id], onDelete: Cascade)
+  group     CustomizationGroup @relation(fields: [groupId], references: [id], onDelete: Cascade)
+
+  @@id([productId, groupId])
+}
+
+model Order {
+  id              String         @id @default(uuid())
+  orderNumber     String         @unique
+  userId          String?
+  user            User?          @relation(fields: [userId], references: [id])
+  customerName    String
+  customerEmail   String
+  customerPhone   String
+  shippingAddress String         // JSON stringified address object
+  billingAddress  String?        // JSON stringified address object
+  eventType       String?
+  eventDate       DateTime?
+  status          String         @default("RECEIVED") // RECEIVED, PROOF_PENDING, IN_PRODUCTION, QUALITY_CHECK, SHIPPED, DELIVERED, CANCELLED
+  paymentStatus   String         @default("PENDING")  // PENDING, PAID, FAILED, REFUNDED, AWAITING_TRANSFER
+  paymentProvider String         @default("LOCAL")    // LOCAL, STRIPE
+  paymentMethod   String         @default("TEST_APPROVED")
+  subtotal        Float
+  shippingFee     Float
+  discountAmount  Float          @default(0.0)
+  totalAmount     Float
+  notes           String?
+  proofStatus     String         @default("NOT_REQUIRED") // NOT_REQUIRED, AWAITING_PROOF, PROOF_SENT, APPROVED, REVISION_REQUESTED
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+  items           OrderItem[]
+  proofs          ProofVersion[]
+}
+
+model OrderItem {
+  id            String  @id @default(uuid())
+  orderId       String
+  order         Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId     String
+  product       Product @relation(fields: [productId], references: [id])
+  unitPrice     Float
+  quantity      Int
+  customization String  // JSON snapshot of custom options selected (fragrance, label names, ribbon color, packaging, etc.)
+}
+
+model ProofVersion {
+  id        String   @id @default(uuid())
+  orderId   String
+  order     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  version   Int      @default(1)
+  imageUrl  String
+  notes     String?
+  status    String   @default("PENDING") // PENDING, APPROVED, REVISION_REQUESTED
+  feedback  String?
+  createdAt DateTime @default(now())
+}
+
+model QuoteRequest {
+  id        String   @id @default(uuid())
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id])
+  name      String
+  email     String
+  phone     String
+  eventType String
+  eventDate DateTime
+  quantity  Int
+  budget    String?
+  details   String
+  status    String   @default("NEW") // NEW, IN_REVIEW, QUOTE_SENT, ACCEPTED, REJECTED
+  createdAt DateTime @default(now())
+}
+
+model InventoryItem {
+  id        String   @id @default(uuid())
+  name      String
+  category  String   // WAX, CONTAINER, FRAGRANCE, PACKAGING, ACCESSORY
+  stock     Float
+  unit      String   // kg, pcs, meters, ml
+  minAlert  Float
+  updatedAt DateTime @updatedAt
+}
+
+model Wishlist {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  productId String
+  createdAt DateTime @default(now())
+
+  @@unique([userId, productId])
+}

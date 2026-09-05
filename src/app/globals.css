@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', 'Outfit', sans-serif;
+  --font-logo: 'Fredoka', 'Outfit', sans-serif;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #1C434C;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-serif-luxury {
+  font-family: var(--font-serif);
+}
+
+.font-logo-brand {
+  font-family: var(--font-logo);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #EBF5F6;
+}
+::-webkit-scrollbar-thumb {
+  background: #6BB3C0;
+  border-radius: 3px;
+}
+
+/* Glassmorphism luxury panel */
+.glass-luxury {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(107, 179, 192, 0.2);
+}
+
+.glass-dark {
+  background: rgba(28, 67, 76, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(107, 179, 192, 0.3);
+}
+
+/* Subtle shimmering teal gradient text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #1C434C 0%, #6BB3C0 50%, #458C99 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Luxury button hover state */
+.btn-gold {
+  background: #6BB3C0;
+  color: #FFFFFF;
+  border: 1px solid #6BB3C0;
+  transition: all 0.3s ease;
+}
+.btn-gold:hover {
+  background: #458C99;
+  color: #FFFFFF;
+  box-shadow: 0 10px 25px -5px rgba(107, 179, 192, 0.4);
+}

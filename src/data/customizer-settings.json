@@ -1,0 +1,391 @@
+{
+  "events": [
+    {
+      "id": "Matrimonio",
+      "label": "Matrimonio & Sposi",
+      "icon": "💍",
+      "subtitle": "Stile coordinato",
+      "status": "ACTIVE",
+      "order": 1
+    },
+    {
+      "id": "Battesimo",
+      "label": "Battesimo & Nascita",
+      "icon": "👶",
+      "subtitle": "Stile coordinato",
+      "status": "ACTIVE",
+      "order": 2
+    },
+    {
+      "id": "Comunione",
+      "label": "Comunione & Cresima",
+      "icon": "🕊️",
+      "subtitle": "Stile coordinato",
+      "status": "ACTIVE",
+      "order": 3
+    },
+    {
+      "id": "Baby Shower",
+      "label": "Baby Shower",
+      "icon": "🧸",
+      "subtitle": "Stile coordinato",
+      "status": "ACTIVE",
+      "order": 4
+    },
+    {
+      "id": "Compleanno",
+      "label": "Compleanno & Festeggiamenti",
+      "icon": "🎂",
+      "subtitle": "Stile coordinato",
+      "status": "ACTIVE",
+      "order": 5
+    },
+    {
+      "id": "Corporate",
+      "label": "Evento Aziendale & Hotel",
+      "icon": "🏢",
+      "subtitle": "Stile coordinato",
+      "status": "ACTIVE",
+      "order": 6
+    },
+    {
+      "id": "Regalo Luxury",
+      "label": "Regalo Personale Luxury",
+      "icon": "🎁",
+      "subtitle": "Stile coordinato",
+      "status": "ACTIVE",
+      "order": 7
+    }
+  ],
+  "models": [
+    {
+      "id": "cand-01",
+      "name": "Candela in vetro",
+      "vessel": "Bicchiere Trasparente Scanalato",
+      "basePrice": 5,
+      "dimensions": "Ø 8,2 × H 5,9 cm.",
+      "weight": "130",
+      "minQuantity": 10,
+      "image": "/uploads/1787843394204_4680668a_8f5a_4dc4_a832_42b40951a06e_png.png",
+      "status": "ACTIVE",
+      "order": 1
+    },
+    {
+      "id": "cand-02",
+      "name": "Candela gesso ceramico",
+      "vessel": "Gesso Ceramico Colato a Mano",
+      "basePrice": 8,
+      "dimensions": "7,8 cm x 9 cm",
+      "weight": "100",
+      "minQuantity": 10,
+      "image": "/uploads/1787843822446_78b61656_3b29_47a4_bb3a_c8110002db8e_png.png",
+      "status": "ACTIVE",
+      "order": 2
+    },
+    {
+      "id": "cand-03",
+      "name": "Candela su barattolo nero opaco",
+      "vessel": "Barattolo nero opaco con coperchio",
+      "basePrice": 8,
+      "dimensions": "9cm x 7cm",
+      "weight": "150 cm",
+      "minQuantity": 10,
+      "image": "/uploads/1787844214792_fdeaad23_6842_4120_8964_611f6f3392ed_png.png",
+      "status": "ACTIVE",
+      "order": 3
+    },
+    {
+      "id": "cand-04",
+      "name": "Candela su bicchiere vetro opaco",
+      "vessel": "Vetro opaco con coperchio",
+      "basePrice": 8,
+      "dimensions": "9cm x 7cm",
+      "weight": "150 gr",
+      "minQuantity": 10,
+      "image": "/uploads/1787844384904_7782651b_d186_479d_a006_e7b1de04bf62_png.png",
+      "status": "ACTIVE",
+      "order": 4
+    }
+  ],
+  "fragrances": [
+    {
+      "id": "frag-1787902673559",
+      "name": "Frutti rossi",
+      "family": "Fruttata",
+      "notes": "Testa: Lampone, melograno, prugna. Cuore: Mirtillo, lillà, fragola, ciliegia, vaniglia. Fondo: Rosa, muschio, mandarino",
+      "description": "",
+      "status": "ACTIVE",
+      "order": 1
+    },
+    {
+      "id": "frag-1787903369867",
+      "name": "Mela e cannella",
+      "family": "Gourmand Speziata",
+      "notes": "Testa: Mele arrostite, limone frizzante. Cuore: Bastoncini di cannella, fragola schiacciata. Fondo: Sciroppo d’acero, zucchero, vaniglia",
+      "description": "",
+      "status": "ACTIVE",
+      "order": 2
+    },
+    {
+      "id": "frag-1787903438005",
+      "name": "Caramello, Lampone & Vaniglia",
+      "family": "Fruttata Gourmand",
+      "notes": "Testa: Fragola, albicocca. Cuore: Ribes caramellato, vaniglia, dolce di latte. Fondo: Muschio, cashmere",
+      "description": "",
+      "status": "ACTIVE",
+      "order": 3
+    },
+    {
+      "id": "frag-1787903482918",
+      "name": "Cappuccino",
+      "family": "Gourmand Cremosa",
+      "notes": "Testa: Caffè macchiato, vaniglia. Cuore: Crema di latte, cacao, panna, caramello. Fondo: Burro, cocco",
+      "description": "",
+      "status": "ACTIVE",
+      "order": 4
+    },
+    {
+      "id": "frag-1787903561812",
+      "name": "Muschio bianco e lavanda",
+      "family": "Aromatica / Muschio",
+      "notes": "Testa: Eucalipto, bucato pulito. Cuore: Lavanda, fava tonka. Fondo: Vaniglia, muschio",
+      "description": "",
+      "status": "ACTIVE",
+      "order": 5
+    },
+    {
+      "id": "frag-1787903725680",
+      "name": "Fior di cotone",
+      "family": "Floreale",
+      "notes": "Testa: Note verdi, accordo aldeidato, bergamotto. Cuore: Rosa, gelsomino, mughetto, garofano, iris. Fondo: Sandalo, muschio, eliotropio",
+      "description": "",
+      "status": "ACTIVE",
+      "order": 6
+    },
+    {
+      "id": "frag-1787904039179",
+      "name": "Cocco",
+      "family": "Tropicale",
+      "notes": "Testa: Latte di cocco. Cuore: Note dolci, vaniglia. Fondo: Orchidea, muschio bianco",
+      "description": "",
+      "status": "ACTIVE",
+      "order": 7
+    },
+    {
+      "id": "frag-1787904113525",
+      "name": "Agrumi",
+      "family": "Agrumata",
+      "notes": "Testa: Limone, mandarino, bergamotto. Cuore: Basilico, timo, lillà, iris. Fondo: Vetiver, patchouli",
+      "description": "",
+      "status": "ACTIVE",
+      "order": 8
+    },
+    {
+      "id": "frag-1787904250343",
+      "name": "Citronella",
+      "family": "Aromatica da giardino",
+      "notes": "Testa: Citronella, note agrumate. Cuore: Citronella. Fondo: Citronella",
+      "description": "",
+      "status": "ACTIVE",
+      "order": 9
+    },
+    {
+      "id": "frag-1787904309332",
+      "name": "Legni speziati",
+      "family": "Orientale / Legnosa / Speziata",
+      "notes": "Testa: Bergamotto, cardamomo, pepe. Cuore: Patchouli, vaniglia, benzoino. Fondo: Vetiver, fava tonka, muschio",
+      "description": "",
+      "status": "ACTIVE",
+      "order": 10
+    }
+  ],
+  "colors": [
+    {
+      "id": "col-r-1",
+      "name": "Avorio",
+      "hex": "#FDFBF7",
+      "category": "ribbon",
+      "status": "ACTIVE",
+      "order": 1
+    },
+    {
+      "id": "col-r-2",
+      "name": "Rosa Cipria",
+      "hex": "#E8C5C8",
+      "category": "ribbon",
+      "status": "ACTIVE",
+      "order": 2
+    },
+    {
+      "id": "col-r-3",
+      "name": "Verde Salvia",
+      "hex": "#8F9E8B",
+      "category": "ribbon",
+      "status": "ACTIVE",
+      "order": 3
+    },
+    {
+      "id": "col-r-4",
+      "name": "Azzurro Polvere",
+      "hex": "#9BB7D4",
+      "category": "ribbon",
+      "status": "ACTIVE",
+      "order": 4
+    },
+    {
+      "id": "col-r-5",
+      "name": "Oro Champenoise",
+      "hex": "#C5A059",
+      "category": "ribbon",
+      "status": "ACTIVE",
+      "order": 5
+    },
+    {
+      "id": "col-r-6",
+      "name": "Beige Naturale",
+      "hex": "#EAE5DC",
+      "category": "ribbon",
+      "status": "ACTIVE",
+      "order": 6
+    },
+    {
+      "id": "col-r-7",
+      "name": "Bianco",
+      "hex": "#FFFFFF",
+      "category": "ribbon",
+      "status": "ACTIVE",
+      "order": 7
+    },
+    {
+      "id": "col-r-8",
+      "name": "Nero",
+      "hex": "#222222",
+      "category": "ribbon",
+      "status": "ACTIVE",
+      "order": 8
+    }
+  ],
+  "fonts": [
+    {
+      "id": "f-1",
+      "name": "Serif Elegante Classico (Playfair)",
+      "value": "classic-serif",
+      "status": "ACTIVE",
+      "order": 1
+    },
+    {
+      "id": "f-2",
+      "name": "Corsivo Calligrafico Moderno",
+      "value": "script-modern",
+      "status": "ACTIVE",
+      "order": 2
+    },
+    {
+      "id": "f-3",
+      "name": "Minimal Moderno Sans",
+      "value": "minimal-sans",
+      "status": "ACTIVE",
+      "order": 3
+    },
+    {
+      "id": "f-4",
+      "name": "Vintage Romano Elegante",
+      "value": "vintage-roman",
+      "status": "ACTIVE",
+      "order": 4
+    }
+  ],
+  "packagings": [
+    {
+      "id": "pack-ivory",
+      "name": "Scatola Rigida cartoncino bianca con nastro coordinato alla candela",
+      "price": 2.5,
+      "image": "/uploads/1787905512718_chatgpt_image_28_ago_2026__10_22_35_png.png",
+      "description": "Scatola rigida di lusso in cartone avorio con nastro in raso coordinato.",
+      "status": "ACTIVE",
+      "order": 1
+    },
+    {
+      "id": "pack-linen",
+      "name": "Scatola plastica trasparente con nastro coordinato alla candela",
+      "price": 2.5,
+      "image": "/uploads/1787905448954_chatgpt_image_28_ago_2026__10_22_28_png.png",
+      "description": "Sacchetto eco-friendly in puro lino lavato con cordoncino.",
+      "status": "ACTIVE",
+      "order": 2
+    },
+    {
+      "id": "pack-none",
+      "name": "Nessuna Confezione (Sfusa)",
+      "price": 0,
+      "image": "/uploads/1787905499339_fdeaad23_6842_4120_8964_611f6f3392ed_png.png",
+      "description": "Incluso nel prezzo base. Candela confezionata in imballo di protezione collettivo.",
+      "status": "ACTIVE",
+      "order": 4
+    },
+    {
+      "id": "pack-1787904434157",
+      "name": "Scatola bianca con finestra in plastica trasparante e nastro coordinato alla candela",
+      "price": 2.5,
+      "image": "/uploads/1787905506652_chatgpt_image_28_ago_2026__10_22_08_png.png",
+      "description": "",
+      "status": "ACTIVE",
+      "order": 4
+    }
+  ],
+  "discountTiers": [
+    {
+      "id": "tier-1",
+      "minQty": 10,
+      "maxQty": 29,
+      "discountPercentage": 10,
+      "label": "10-29 pezzi → 10% sconto",
+      "status": "ACTIVE",
+      "order": 1
+    },
+    {
+      "id": "tier-2",
+      "minQty": 30,
+      "maxQty": 49,
+      "discountPercentage": 15,
+      "label": "30-49 pezzi → 15% sconto",
+      "status": "ACTIVE",
+      "order": 2
+    },
+    {
+      "id": "tier-3",
+      "minQty": 50,
+      "maxQty": 99,
+      "discountPercentage": 25,
+      "label": "50-99 pezzi → 25% sconto",
+      "status": "ACTIVE",
+      "order": 3
+    },
+    {
+      "id": "tier-4",
+      "minQty": 100,
+      "maxQty": 199,
+      "discountPercentage": 35,
+      "label": "100-199 pezzi → 35% sconto",
+      "status": "ACTIVE",
+      "order": 4
+    },
+    {
+      "id": "tier-5",
+      "minQty": 200,
+      "maxQty": 9999,
+      "discountPercentage": 40,
+      "label": "200+ pezzi → 40% sconto",
+      "status": "ACTIVE",
+      "order": 5
+    }
+  ],
+  "labelSettings": {
+    "namesPlaceholder": "es. Giulia & Marco",
+    "namesDefault": "Giulia & Marco",
+    "datePlaceholder": "es. 15 Settembre 2026",
+    "dateDefault": "15 Settembre 2026",
+    "phrasePlaceholder": "es. Grazie per aver condiviso questo giorno con noi",
+    "phraseDefault": "Grazie per aver condiviso questo giorno con noi"
+  }
+}
